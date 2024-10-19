@@ -1,7 +1,7 @@
 
 # Token Distribution Automation Script
 
-This project is an automated script that distributes daily tokens via a smart contract on the Polygon testnet. The script is triggered daily at 9:30 AM UTC by a cron job and interacts with the smart contract using Alchemy Web3.
+This project is an automated script that distributes daily tokens via a smart contract on the Polygon testnet/mainnet. The script is triggered daily at 9:30 AM UTC by a cron job and interacts with the smart contract using Alchemy Web3.
 
 ---
 
