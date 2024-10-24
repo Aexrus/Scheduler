@@ -99,6 +99,7 @@ async function distributeTokens() {
 
     // Send the transaction
     const receipt = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
+    console.log('Transaction receipt:', receipt);
   } catch (error) {
     if (error.message && error.message.includes("Too early for next mint")) {
       console.log('Skipped: It is too early for the next mint. Waiting for the correct time.');
@@ -117,7 +118,7 @@ async function distributeTokens() {
  * ............................................................
  */
 
-cron.schedule('* * * * *', () => {
+cron.schedule('30 9 * * *', () => {
   console.log('Cron job triggered. Initiating token distribution at', new Date().toLocaleString());
   distributeTokens();
 });
